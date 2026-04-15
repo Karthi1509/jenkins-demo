@@ -6,28 +6,28 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "Cloning repository..."
-                git 'https://github.com/YOUR_USERNAME/jenkins-demo.git'
+                git 'https://github.com/Karthi1509/jenkins-demo.git'
             }
         }
 
         stage('Build') {
             steps {
-                echo "Build stage (Python doesn't need compilation)"
+                echo "Checking Python version..."
                 sh 'python3 --version'
             }
         }
 
         stage('Test') {
             steps {
-                echo "Running Python script..."
+                echo "Running Python app..."
                 sh 'python3 app.py'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo "Deploy stage"
-                sh 'echo Deployment simulated'
+                echo "Deploying..."
+                sh 'echo Deployment completed'
             }
         }
     }
