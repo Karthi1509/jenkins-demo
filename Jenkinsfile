@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                echo "Cloning code..."
+                echo "Cloning repository..."
                 git 'https://github.com/Karthi1509/jenkins-demo.git'
             }
         }
@@ -18,13 +18,13 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo "Running tests..."
+                echo "Testing project..."
             }
         }
 
         stage('Deploy') {
             steps {
-                echo "Deploying application..."
+                echo "Deploying project..."
             }
         }
     }
