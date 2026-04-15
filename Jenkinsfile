@@ -1,24 +1,30 @@
 pipeline {
     agent any
+
     stages {
+
         stage('Checkout') {
             steps {
-                echo "Checking out..."
+                echo "Checking out code..."
+                git 'https://github.com/Karthi1509/jenkins-demo.git'
             }
         }
+
         stage('Build') {
             steps {
-                echo "Building..."
+                echo "Building project..."
             }
         }
+
         stage('Test') {
             steps {
-                echo "Testing..."
+                echo "Running tests..."
             }
         }
+
         stage('Deploy') {
             steps {
-                echo "Deploying..."
+                echo "Deploying application..."
             }
         }
     }
